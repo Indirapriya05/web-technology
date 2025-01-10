@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>animation</title>
+        <style>
+            body{
+                font-family: 'Courier New', Courier, monospace;
+                padding: 15px;
+                margin: 20px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background: linear-gradient(140deg,rgb(220, 95, 137),rgb(213, 72, 183),rgb(213, 213, 22));
+                color: rgb(13, 1, 1);
+            }
+            .animy{
+                overflow: hidden;
+                width: 80%;
+                border: 2px solid #fff;
+                border-radius: 12px;
+                padding: 12px;
+                white-space: nowrap;
+            }
+            .effect{
+                display: inline-block;
+                font-size: 25px;
+                font-weight: 25px;
+                animation: scroll-left 12s linear infinite;
+
+            }
+            @keyframes scroll-left{
+                from{
+                    transform: translateX(100%);
+                }
+                to{
+                    transform: translateX(-100%);
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="animy">
+            <div class="effect">
+                Here is a scrolling text Animation
+            </div>
+        </div>
+        
+    </body>
+</html>

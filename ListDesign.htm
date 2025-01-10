@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Listing the Data Using CSS</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f3f4f6;
+                color: #333;
+                margin: 50px;
+                line-height: 1.6;
+            }
+            h1 {
+                text-align: center;
+                color: #8e44ad;
+                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+                font-size: 36px;
+                margin-bottom: 40px;
+            }
+            h2 {
+                text-decoration: underline;
+                color: #6a89cc;
+                margin-bottom: 15px;
+                font-size: 24px;
+            }
+            .List-Item {
+                margin: 40px auto;
+                max-width: 800px;
+                padding: 20px;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            }
+            ul.dynamic-list, ol.odr-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            ul.dynamic-list li, ol.odr-list li {
+                padding: 15px;
+                margin: 10px 0;
+                background: linear-gradient(135deg, #fad0c4, #ffd1dc); /* Light pink pastel gradient */
+                border-radius: 8px;
+                box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+                font-size: 18px;
+            }
+            ul.dynamic-list li:hover, ol.odr-list li:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+                background: linear-gradient(135deg, #ffd1dc, #f7c6f2); /* Soft pink hover effect */
+            }
+            ul.dynamic-list ul, ol.odr-list ol {
+                margin-left: 20px;
+                padding-left: 20px;
+                border-left: 3px solid #a1c4fd; /* Soft blue border */
+            }
+            ul.dynamic-list ul li, ol.odr-list ol li {
+                background: linear-gradient(135deg, #e4f1fc, #c6e2ff); /* Pastel blue for nested items */
+                font-size: 16px;
+            }
+            .dynamic-list li::before, .odr-list li::before {
+                content: "✔️ ";
+                color: #6a89cc;
+                font-weight: bold;
+            }
+            /* Optional: Add a soft animation effect for the lists */
+            @keyframes fadeIn {
+                0% { opacity: 0; transform: translateY(20px); }
+                100% { opacity: 1; transform: translateY(0); }
+            }
+            .List-Item {
+                animation: fadeIn 1s ease-out;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Lists</h1>
+        <div class="List-Item">
+            <h2>Provision List</h2>
+            <ul class="dynamic-list">
+                <li>Stationary Items</li>
+                <li>Candy</li>
+                <li>Spices
+                    <ul>
+                        <li>Veggies</li>
+                        <li>Chips</li>
+                    </ul>
+                </li>
+                <li>Soft Drinks</li>
+            </ul>
+        </div>
+        <div class="List-Item">
+            <h2>Ordered List</h2>
+            <ol class="odr-list">
+                <li>Paper</li>
+                <li>Wrist Watch
+                    <ol>
+                        <li>Airpods</li>
+                        <li>Tab</li>
+                    </ol>
+                </li>
+                <li>Sweets</li>
+            </ol>
+        </div>
+    </body>
+</html>

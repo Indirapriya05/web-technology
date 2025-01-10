@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>HyperLink Page</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding:0;
+                background-color: rgb(230, 224, 236);
+                color: #090909;
+            }
+            header{
+               background-color: rgb(246, 109, 177);
+               color: black;
+               padding: 8px 15px;
+               text-align:center;
+            }
+            nav{
+                background-color: lightgray;
+                display: flex;
+                padding: 10px 0;
+                justify-content: center;
+            }
+            nav a{
+                color: rgb(8, 8, 8);
+                text-decoration: none;
+                padding: 10px 20px;
+                margin: 0 12px;
+                border-radius:6px;
+                transition:background-color 0.9s;
+
+            }
+            nav a:hover{
+                background-color: goldenrod;
+            }
+            section{
+                padding: 20px;
+                margin: 20px auto;
+                max-width: 700px;
+                background:#f16969 ;
+                box-shadow: 0 0 10px rgba(0,0,0.1);
+
+                border-radius: 10px;
+            }
+            h1,h2{
+                color: rgb(12, 11, 11);
+            }
+            .button{
+                display: inline-block;
+                padding: 10px 20px;
+                margin: 10px 0;
+                color: tan;
+                background-color: aquamarine;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+            .button:hover{
+                background-color: brown;
+            }
+            footer{
+                text-align: center;
+                padding: 10px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>hyperlink page demo</h1>
+        </header>
+        <nav>
+          
+            <a href="#About">About</a>
+            <a href="#Contact">contact</a>
+            <a href="Threads">Threads</a>
+        </nav>
+        <section id="About">
+            <h2>About us</h2>
+            <hr>
+            <p>we creating a webpage that would serves as amazing website
+            <a href="https://example.com/About" class="button">click</a>
+            </p>
+        </section>
+        <section id="Threads">
+            <h2>My Thread Page</h2>
+            <ul>
+                <li>
+                    <a href="https://github.com" >Visit My GitHub Link</a>
+                </li>
+                <li>
+                    <a href="https://example.com/portfolio">View Portfolio</a>
+                </li>
+                <li>
+                    <a href="contact">Contact <Menu></Menu></a>
+                </li>
+            </ul>
+        </section>
+        <section id ="Contact">
+            <h2>Contact Me</h2>
+            <p>Have anny queries or wanna connect? send mail as:
+                <a href="mail:ex@example.com">ex@example.com</a>
+            </p>
+        </section>
+        <footer>
+            <p>&copy;2025 WEbsite.all rights reserved</p>
+        </footer>
+    </body>
+</html>
